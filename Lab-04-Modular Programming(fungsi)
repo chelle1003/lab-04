@@ -1,0 +1,73 @@
+print("********** Selamat Datang di Toko Emas Sejahtera **********")
+print()
+print("Transaksi apa yang ingin anda lakukan ?")
+print("1.Beli")
+print("2.Jual")
+pilih1=int(input("Masukkan pilihan anda 1/2:"))
+if pilih1==1:
+  print("Emas Jenis apa yang ingin anda beli?")
+  print("1.Emas Kuning")
+  print("2.Emas Putih")
+  print("3.Emas Rose Gold")
+  pilih2=int(input("Masukkan pilihan emas yang ingin anda beli 1/2/3:"))
+  if pilih2==1:
+    emas_kuning=655000
+    berat1=float(input("Masukkan berapa gram yang ingin anda beli:"))
+    def total_pembayaran(emas_kuning,berat1):
+      total=emas_kuning*berat1
+      return total
+    print("Jumlah yang harus anda bayarkan sebesar: Rp",total_pembayaran(emas_kuning,berat1))
+  elif pilih2==2:
+    emas_putih=685000
+    berat2=float(input("Masukkan berapa gram yang ingin anda beli:"))
+    def total_pembayaran(emas_putih,berat2):
+      total=emas_putih*berat2
+      return total
+    print("Jumlah yang harus anda bayarkan sebesar: Rp",total_pembayaran(emas_putih,berat2))
+  elif pilih2==3:
+    emas_rosegold=685000
+    berat3=float(input("Masukkan berapa gram yang ingin anda beli:"))
+    def total_pembayaran(emas_rosegold,berat3):
+      total=emas_rosegold*berat3
+      return total
+    print("Jumlah yang harus anda bayarkan sebesar: Rp",total_pembayaran(emas_rosegold,berat3)) 
+  else:
+    print("Maaf toko kami hanya menjual jenis emas yang ada di pilihan, silahkan pilih ulang")
+elif pilih1==2:
+     nota=input("Apakah anda memiliki nota pembelian emas sebelumnya?:")
+     if nota==("ya"):
+       print("Baiklah silahkan memilih jenis emas mana yang ingin anda jual:") 
+       print("1.Emas Kuning")
+       print("2.Emas Putih")
+       print("3.Emas Rose Gold")
+       emas=int(input("Masukkan pilihan emas mana yang ingin anda jua 1/2/3:"))
+       if emas==1:
+         emas_kuning=655000
+         gram1=float(input("Berapa gram emas yang ingin anda jual:"))
+         rugi1=100000
+         def uang_didapat(emas_kuning,gram1,rugi1):
+           hasil=emas_kuning*gram1-rugi1
+           return hasil
+         print("Uang yang anda dapat dari menjual emas tersebut: Rp",uang_didapat(emas_kuning,gram1,rugi1))  
+       elif  emas==2:
+         emas_putih=685000
+         gram2=float(input("Berapa gram emas yang ingin anda jual:"))
+         rugi2=150000
+         def uang_didapat(emas_putih,gram2,rugi2):
+           hasil=emas_putih*gram2-rugi2
+           return hasil
+         print("Uang yang anda dapat dari menjual emas tersebut: Rp",uang_didapat(emas_putih,gram1,rugi2))
+       elif emas==3:
+         emas_rosegold=685000
+         gram3=float(input("Berapa gram emas yang ingin anda jual:"))
+         rugi3=150000
+         def uang_didapat(emas_rosegold,gram3,rugi3):
+           hasil=emas_rosegold*gram3-rugi3
+           return hasil
+         print("Uang yang anda dapat dari menjual emas tersebut: Rp",uang_didapat(emas_rosegold,gram3,rugi3))
+       else:
+         print("Maaf anda tidak bisa menjual emas tersebut di toko kami!") 
+     else:
+       print("Maaf anda tidak bisa menjual emas di toko kami jika tidak memiliki nota pembelian sebelumnya!")   
+else:
+  print("Maaf toko kami hanya melayani transaksi yang ada di pilihan, silhakna pilih ulang!")   
